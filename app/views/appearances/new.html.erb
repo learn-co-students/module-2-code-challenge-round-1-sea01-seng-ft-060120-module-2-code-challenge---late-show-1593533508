@@ -1,0 +1,14 @@
+<h1>New Appearance Page</h1>
+
+<%= form_for @appearance do |f| %>
+
+    Guest: <%= f.collection_select(:guest_id, Guest.all, :id, :name) %> <br><br>
+    Episode Number: <%= f.collection_select(:episode_id, Episode.all, :id, :number) %> <br><br>
+    
+    <%= f.label "Rating: " %>
+    <%= f.text_field :rating, size:1 %> <br><br>
+    
+
+    <%= f.submit %><br>
+    <%= flash[:message] %>
+<% end %>
