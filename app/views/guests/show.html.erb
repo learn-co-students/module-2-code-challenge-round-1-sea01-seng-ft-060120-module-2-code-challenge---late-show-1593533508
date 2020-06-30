@@ -1,0 +1,8 @@
+<h2>Guest Appearances</h2>
+
+<% @guest.episodes.each do |episode| %>
+    <%= link_to episode.date, episode %><br>
+    <% episode.appearances.each { |e| %>
+    <%= e.rating %><br>
+<% } %>
+<% end %>
