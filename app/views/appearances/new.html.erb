@@ -1,0 +1,13 @@
+<h1>Create Appearance</h1>
+  
+<%= form_for @appearance do |f| %>
+    <% if @appearance.errors.any?%>
+        <% @appearance.errors.full_messages.each do |message| %>
+             <p style="color:rgb(255,0,0);"><%= message %></p>
+        <% end %>
+    <% end %>
+    Select Guest: <%= f.collection_select(:guest_id, Guest.all, :id, :name) %><br><br>
+    Select Episode: <%= f.collection_select(:episode_id, Episode.all, :id, :number) %><br><br>
+    Rating: <%= f.number_field :rating%><br><br>
+    <%= f.submit %>
+<% end %> 
