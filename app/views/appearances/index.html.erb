@@ -1,0 +1,6 @@
+<h1>All The Appearances</h1>
+
+
+  <% @appearances.each do |app| %>
+    <li><%= link_to app, guest_path(app) %></li>
+  <% end %>
