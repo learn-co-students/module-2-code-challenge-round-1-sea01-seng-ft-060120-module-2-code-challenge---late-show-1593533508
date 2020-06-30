@@ -1,0 +1,11 @@
+<h1><%= @guest.name %></h1>
+
+<% @guest.episodes.each do |e| %>
+    <%= e.number %>
+    <%= e.date %>
+    <5= e.rating %>
+<% end %>
+
+
+<%#displays name & links to show page %>
+<%#wont display episodes guest has appeared on%>

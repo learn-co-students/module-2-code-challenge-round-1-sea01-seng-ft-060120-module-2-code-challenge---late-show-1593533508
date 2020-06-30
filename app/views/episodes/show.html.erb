@@ -1,0 +1,13 @@
+<h1><%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}" %></h1>
+
+<h3><% @episode.guests.each do |g| %>
+    <%= link_to g.name, guest_path(e) %>
+    <% end %></h3>
+
+
+
+
+
+
+
+    <%#wont display guest names, most likely error with saving appearances%>

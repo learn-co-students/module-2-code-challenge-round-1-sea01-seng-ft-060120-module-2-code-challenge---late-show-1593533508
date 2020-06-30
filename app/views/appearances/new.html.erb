@@ -1,0 +1,10 @@
+<%= flash[:message] %>
+<%= form_for @appearance do |f| %>
+    <h3>Guest: <%= collection_select(:guests, :guest_id, Guest.all, :id, :name) %></h3>
+    <h3>Episode: <%= collection_select(:episodes, :episode_id, Episode.all, :id, :number) %></h3>
+    <h3>Rating: <%= f.text_field :rating %></h3>
+    <%= f.submit %>
+<% end %>
+
+<%#brower keeps putting out error message even when first taken to screen?%>
+<%#wton save appearance%>
